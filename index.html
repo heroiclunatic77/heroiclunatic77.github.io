@@ -67,13 +67,47 @@
 </section>
 
 <section id="contact" class="section dark">
-  <div class="container">
-    <h2>Contact</h2>
-    <p>Email: your@email.com</p>
-    <p class="footer">© 2025 Hrishikesh Keswani</p>
+  <div class="container contact-wrapper">
+
+    <!-- LEFT -->
+    <div class="contact-left">
+      <h2>Contact Me</h2>
+
+      <div class="contact-item">
+        <span class="icon">✉️</span>
+        <span id="email-personal">keswani.hrishikesh7@gmail.com</span>
+        <button class="copy-btn" data-copy="email-personal">📋</button>
+      </div>
+
+      <div class="contact-item">
+        <span class="icon">🎓</span>
+        <span id="email-edu">keswani.h@northeastern.edu</span>
+        <button class="copy-btn" data-copy="email-edu">📋</button>
+      </div>
+
+      <div class="socials">
+        <a href="https://www.linkedin.com/in/hrishikesh-keswani-0291b6181/" target="_blank" title="LinkedIn">
+          <img src="assets/img/linkedin.svg" alt="LinkedIn">
+        </a>
+        <a href="https://github.com/heroiclunatic77" target="_blank" title="GitHub">
+          <img src="assets/img/github.svg" alt="GitHub">
+        </a>
+      </div>
+
+      <!-- RESUME -->
+      <a href="Hrishikesh_Keswani_Resume.pdf" class="resume-btn" target="_blank">
+        View / Download Resume
+      </a>
+    </div>
+
+    <!-- RIGHT -->
+    <form class="contact-form" onsubmit="handleSubmit(event)">
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Email" required>
+      <textarea placeholder="Your Message" required></textarea>
+      <button class="btn" type="submit">Send Message</button>
+      <p id="form-status" class="muted"></p>
+    </form>
+
   </div>
 </section>
-
-<script src="js/main.js"></script>
-</body>
-</html>
