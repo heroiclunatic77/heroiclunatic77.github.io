@@ -5,7 +5,7 @@
 *{box-sizing:border-box}
 body{
   margin:0;font-family:system-ui,sans-serif;
-  background:linear-gradient(#0b0f19,#020617);
+  background:#000000;
   color:var(--text);
 }
 a{text-decoration:none;color:inherit}
