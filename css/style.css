@@ -119,16 +119,15 @@ h1 span{color:var(--accent)}
 }
 
 .hero-image img{
-  width:100%;          /* controls size */
+  width:320px;          /* controls size */
   height:100%;
-  object-fit:cover;     /* crops nicely */
+  object-fit:contain;     /* crops nicely */
   border-radius:0;    /* circular */
   border: none;
-  box-shadow:none;
 }
 
 /* Responsive: stack hero on small screens */
-@media (max-width: 860px){
+@media (mix-width: 860px){
   .hero-grid{
     grid-template-columns:1fr;
   }
