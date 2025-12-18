@@ -41,9 +41,10 @@
   </div>
 </section>
 
+<!-- ABOUT -->
 <section id="about" class="section">
   <div class="container">
-    <h2>About Me</h2>
+    <h2 class="about-title">About Me</h2>
 
     <p class="about-text">
       I’m Hrishikesh Keswani, a Machine Learning Engineer based in Boston with over 2 years of experience
@@ -58,15 +59,81 @@
       <br><br>
       My strengths lie at the intersection of model development and real-world deployment—from
       fine-tuning and inference optimization to distributed training, monitoring, and cloud-native
-      deployment on AWS, Docker, and Kubernetes. I enjoy translating complex problems into scalable
-      systems that create measurable business impact.
-      <br><br>
-      Outside of work, I’m passionate about building AI products, experimenting with new LLM architectures,
-      and continuously improving how machine learning systems perform in production.
+      deployment on AWS, Docker, and Kubernetes. Outside of work, I’m passionate about building AI
+      products and experimenting with new LLM architectures.
     </p>
+
+    <!-- TABS -->
+    <div class="about-tabs">
+      <button class="about-tab active" data-tab="skillsTab">Skills</button>
+      <button class="about-tab" data-tab="experienceTab">Experience</button>
+      <button class="about-tab" data-tab="educationTab">Education</button>
+    </div>
+
+    <!-- SKILLS -->
+    <div class="about-panel active" id="skillsTab">
+      <div class="about-item">
+        <h3>Core ML / AI</h3>
+        <p>PyTorch, LangChain, HuggingFace, LLMs (Llama-3, GPT-4o, Mistral), vLLM, MLflow</p>
+      </div>
+      <div class="about-item">
+        <h3>Programming</h3>
+        <p>Python, SQL, Java, C++, Golang, TypeScript, Scala</p>
+      </div>
+      <div class="about-item">
+        <h3>Databases & Data Systems</h3>
+        <p>Apache Spark, Airflow, Kafka, Redis, PostgreSQL, MongoDB, Druid, Solr</p>
+      </div>
+      <div class="about-item">
+        <h3>Cloud & DevOps</h3>
+        <p>AWS (S3, Lambda, EC2, EKS, EMR), Docker, Kubernetes, OpenShift, CI/CD</p>
+      </div>
+      <div class="about-item">
+        <h3>APIs & Frameworks</h3>
+        <p>FastAPI, Django, GraphQL, TensorFlow / Keras, Spring Boot</p>
+      </div>
+    </div>
+
+    <!-- EXPERIENCE -->
+    <div class="about-panel" id="experienceTab">
+      <div class="about-item">
+        <h3>Machine Learning Engineer — Boehringer Ingelheim</h3>
+        <p>Athens, Georgia, USA · January 2025 – July 2025</p>
+      </div>
+      <div class="about-item">
+        <h3>Data Scientist — Yunometa</h3>
+        <p>Mumbai, India · August 2022 – July 2023</p>
+      </div>
+      <div class="about-item">
+        <h3>Data Scientist — Kritexco</h3>
+        <p>Mumbai, India · December 2021 – March 2022</p>
+      </div>
+      <div class="about-item">
+        <h3>Machine Learning Engineer — Aadyam Infotech</h3>
+        <p>Pune, India · June 2021 – August 2021</p>
+      </div>
+    </div>
+
+    <!-- EDUCATION -->
+    <div class="about-panel" id="educationTab">
+      <div class="about-item">
+        <h3>Northeastern University</h3>
+        <p>Master of Science in Data Analytics Engineering · December 2025</p>
+      </div>
+      <div class="about-item">
+        <h3>Relevant Coursework</h3>
+        <p>
+          Foundations for Data Analytics, Data Management for Analytics, Data Mining,
+          Computation & Visualization, Neural Networks & Deep Learning,
+          Natural Language Processing, Database Management Systems
+        </p>
+      </div>
+    </div>
+
   </div>
 </section>
 
+<!-- PORTFOLIO -->
 <section id="portfolio" class="section">
   <div class="container">
     <h2>Portfolio</h2>
@@ -83,10 +150,10 @@
   </div>
 </section>
 
+<!-- CONTACT -->
 <section id="contact" class="section dark">
   <div class="container contact-wrapper">
 
-    <!-- LEFT -->
     <div class="contact-left">
       <h2>Contact Me</h2>
 
@@ -103,21 +170,19 @@
       </div>
 
       <div class="socials">
-        <a href="https://www.linkedin.com/in/hrishikesh-keswani-0291b6181/" target="_blank" title="LinkedIn">
+        <a href="https://www.linkedin.com/in/hrishikesh-keswani-0291b6181/" target="_blank">
           <img src="assets/img/linkedin.svg" alt="LinkedIn">
         </a>
-        <a href="https://github.com/heroiclunatic77" target="_blank" title="GitHub">
+        <a href="https://github.com/heroiclunatic77" target="_blank">
           <img src="assets/img/github.svg" alt="GitHub">
         </a>
       </div>
 
-      <!-- RESUME -->
       <a href="Hrishikesh_Keswani_Resume.pdf" class="resume-btn" target="_blank">
         View / Download Resume
       </a>
     </div>
 
-    <!-- RIGHT -->
     <form class="contact-form" onsubmit="handleSubmit(event)">
       <input type="text" placeholder="Your Name" required>
       <input type="email" placeholder="Your Email" required>
