@@ -139,4 +139,37 @@ h1 span{color:var(--accent)}
     height:100%;
   }
 }
+/* ABOUT TABS AS BUTTONS */
+.about-tabs{
+  display:flex;
+  gap:12px;
+  margin:18px 0 26px;
+  flex-wrap:wrap;
+}
+
+.about-tab{
+  border:1px solid #2a2a2a;
+  background:#0f0f0f;
+  color:var(--text);
+  padding:10px 16px;
+  border-radius:999px;     /* pill button */
+  font-weight:650;
+  cursor:pointer;
+  transition:transform .08s ease, background .2s ease, border-color .2s ease;
+}
+
+.about-tab:hover{
+  background:#151515;
+  transform:translateY(-1px);
+  border-color:#3a3a3a;
+}
+
+.about-tab.active{
+  background:var(--accent);
+  color:#020617;
+  border-color:transparent;
+}
+
+/* remove underline if you had it */
+.about-tab.active::after{ content:none !important; }
 
