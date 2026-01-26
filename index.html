@@ -11,179 +11,288 @@
 
 <header class="nav">
   <div class="container nav-inner">
-    <div class="logo">Why Hrishikesh?</div>
+    <a href="#hero" class="logo">hrishikesh.py</a>
     <nav>
-      <a href="#home">Home</a>
       <a href="#about">About</a>
-      <a href="#speciality">Speciality</a>
-      <a href="#portfolio">Portfolio</a>
+      <a href="#projects">Projects</a>
+      <a href="#work">Work</a>
+      <a href="#education">Education</a>
       <a href="#contact">Contact</a>
     </nav>
   </div>
 </header>
 
-<section id="home" class="hero">
+<!-- HERO -->
+<section id="hero" class="hero">
   <div class="container hero-grid">
-    <div>
-      <p class="subtitle">Machine Learning Engineer</p>
-      <h1>Hi, I’m <span>Hrishikesh</span> Keswani</h1>
-      <p class="description">
-        I build scalable LLM & RAG systems, ML pipelines, and high-performance inference platforms.
+    <div class="hero-main">
+      <p class="hero-kicker">Machine Learning Engineer</p>
+      <h1>Hrishikesh Keswani</h1>
+      <p class="hero-subtitle">
+        I build scalable LLM & RAG systems, distributed training pipelines, and high-performance ML platforms that actually ship.
       </p>
+
+      <!-- Terminal-style block (inspired by reference) -->
+      <div class="hero-terminal">
+        <div class="terminal-header">
+          <span class="dot red"></span>
+          <span class="dot yellow"></span>
+          <span class="dot green"></span>
+          <span class="terminal-title">hrishikesh@portfolio:~$</span>
+        </div>
+        <div class="terminal-body">
+          <p><span class="prompt">❯</span> python deploy_rag_system.py</p>
+          <p><span class="prompt">✔</span> vLLM server started on multi-GPU Ray cluster</p>
+          <p><span class="prompt">✔</span> Airflow pipeline scheduled for nightly retraining</p>
+          <p><span class="prompt">✔</span> Latency & SLA metrics streaming to Grafana</p>
+        </div>
+      </div>
+
+      <!-- Skills cloud -->
+      <div class="skills-cloud">
+        <span class="chip">LLMs & RAG</span>
+        <span class="chip">PyTorch</span>
+        <span class="chip">vLLM</span>
+        <span class="chip">Ray</span>
+        <span class="chip">Airflow</span>
+        <span class="chip">AWS</span>
+        <span class="chip">Docker · K8s</span>
+      </div>
+
       <div class="buttons">
-        <a href="#portfolio" class="btn">View Work</a>
-        <a href="Hrishikesh_Keswani_Resume.pdf" class="btn outline" target="_blank">Resume</a>
+        <a href="#projects" class="btn">View Projects</a>
+        <a href="Hrishikesh_Keswani_Resume.pdf" class="btn outline" target="_blank">Download Resume</a>
       </div>
     </div>
+
     <div class="hero-image">
-      <img src="assets/img/profile_pic.png" alt="Profile image" />
+      <img src="assets/img/profile_pic.png" alt="Profile image of Hrishikesh Keswani" />
     </div>
   </div>
 </section>
 
 <!-- ABOUT -->
 <section id="about" class="section">
-  <div class="container">
-    <h2 class="about-title">About Me</h2>
-
-    <p class="about-text">
-      I’m Hrishikesh Keswani, a Machine Learning Engineer based in Boston with over 2 years of experience
-      building scalable AI and data-driven systems. I specialize in end-to-end machine learning pipelines,
-      with a strong focus on LLMs, Retrieval-Augmented Generation (RAG), and production ML systems.
-      <br><br>
-      Currently pursuing a Master’s in Data Analytics Engineering at Northeastern University, I’ve worked
-      across industry and startup environments, including Boehringer Ingelheim, where I designed a
-      large-scale employee feedback analysis platform using Llama-3, GPT-4o, FastAPI, Ray, and Airflow,
-      processing insights from over 10,000+ responses while meeting strict performance and reliability
-      requirements.
-      <br><br>
-      My strengths lie at the intersection of model development and real-world deployment—from
-      fine-tuning and inference optimization to distributed training, monitoring, and cloud-native
-      deployment on AWS, Docker, and Kubernetes. Outside of work, I’m passionate about building AI
-      products and experimenting with new LLM architectures.
-    </p>
-
-    <!-- TABS -->
-    <div class="about-tabs">
-      <button class="about-tab active" data-tab="skillsTab">Skills</button>
-      <button class="about-tab" data-tab="experienceTab">Experience</button>
-      <button class="about-tab" data-tab="educationTab">Education</button>
+  <div class="container section-grid">
+    <div>
+      <h2 class="section-title">About Me</h2>
+      <p class="about-text">
+        I’m a Machine Learning Engineer based in Boston with 2+ years of experience building
+        end-to-end ML systems across healthcare, fintech, and AI products. I work across the stack:
+        data engineering, model development, and production deployment with strong focus on
+        reliability and performance.
+        <br><br>
+        At Boehringer Ingelheim, I designed a large-scale feedback analysis platform using
+        Llama-3, GPT-4o, FastAPI, vLLM, Ray, and Airflow to process 10,000+ employee responses
+        under strict SLA requirements. Earlier at Yunometa, I modernized a monolithic system into
+        AWS-native microservices and built scalable data pipelines over 10M+ records.
+        <br><br>
+        I’m most excited when turning research-y LLM ideas into robust, observable systems
+        with clear metrics, dashboards, and a clean deployment story.
+      </p>
     </div>
 
-    <!-- SKILLS -->
-    <div class="about-panel active" id="skillsTab">
-      <div class="about-item">
-        <h3>Core ML / AI</h3>
-        <p>PyTorch, LangChain, HuggingFace, LLMs (Llama-3, GPT-4o, Mistral), vLLM, MLflow</p>
-      </div>
-      <div class="about-item">
-        <h3>Programming</h3>
-        <p>Python, SQL, Java, C++, Golang, TypeScript, Scala</p>
-      </div>
-      <div class="about-item">
-        <h3>Databases & Data Systems</h3>
-        <p>Apache Spark, Airflow, Kafka, Redis, PostgreSQL, MongoDB, Druid, Solr</p>
-      </div>
-      <div class="about-item">
-        <h3>Cloud & DevOps</h3>
-        <p>AWS (S3, Lambda, EC2, EKS, EMR), Docker, Kubernetes, OpenShift, CI/CD</p>
-      </div>
-      <div class="about-item">
-        <h3>APIs & Frameworks</h3>
-        <p>FastAPI, Django, GraphQL, TensorFlow / Keras, Spring Boot</p>
+    <div class="about-side">
+      <h3 class="about-side-title">Snapshot</h3>
+      <ul class="about-list">
+        <li><span>Current</span><span>MS Data Analytics Engineering, Northeastern (Dec 2025)</span></li>
+        <li><span>Location</span><span>Boston, MA · Open to relocation</span></li>
+        <li><span>Focus</span><span>LLMs, RAG, MLOps, Distributed Training</span></li>
+        <li><span>Looking for</span><span>ML Engineer / MLE II / Applied Scientist</span></li>
+      </ul>
+
+      <h3 class="about-side-title">Core Stack</h3>
+      <div class="skills-grid">
+        <div>
+          <p class="skills-label">ML / AI</p>
+          <p class="skills-text">PyTorch, Transformers, LLMs (Llama-3, GPT-4o, Mistral), RAG, LoRA/PEFT, MLflow</p>
+        </div>
+        <div>
+          <p class="skills-label">Data & Infra</p>
+          <p class="skills-text">Spark, Airflow, Kafka, Redis, PostgreSQL, MongoDB, Druid, Solr</p>
+        </div>
+        <div>
+          <p class="skills-label">Cloud & DevOps</p>
+          <p class="skills-text">AWS (S3, Lambda, EC2, EKS, EMR), Docker, Kubernetes, OpenShift, CI/CD</p>
+        </div>
+        <div>
+          <p class="skills-label">APIs & Frameworks</p>
+          <p class="skills-text">FastAPI, Django, GraphQL, TensorFlow/Keras, Spring Boot</p>
+        </div>
       </div>
     </div>
-
-    <!-- EXPERIENCE -->
-    <div class="about-panel" id="experienceTab">
-      <div class="about-item">
-        <h3>Machine Learning Engineer — Boehringer Ingelheim</h3>
-        <p>Athens, Georgia, USA · January 2025 – July 2025</p>
-      </div>
-      <div class="about-item">
-        <h3>Data Scientist — Yunometa</h3>
-        <p>Mumbai, India · August 2022 – July 2023</p>
-      </div>
-      <div class="about-item">
-        <h3>Data Scientist — Kritexco</h3>
-        <p>Mumbai, India · December 2021 – March 2022</p>
-      </div>
-      <div class="about-item">
-        <h3>Machine Learning Engineer — Aadyam Infotech</h3>
-        <p>Pune, India · June 2021 – August 2021</p>
-      </div>
-    </div>
-
-    <!-- EDUCATION -->
-    <div class="about-panel" id="educationTab">
-      <div class="about-item">
-        <h3>Northeastern University</h3>
-        <p>Master of Science in Data Analytics Engineering · December 2025</p>
-      </div>
-      <div class="about-item">
-        <h3>Relevant Coursework</h3>
-        <p>
-          Foundations for Data Analytics, Data Management for Analytics, Data Mining,
-          Computation & Visualization, Neural Networks & Deep Learning,
-          Natural Language Processing, Database Management Systems
-        </p>
-      </div>
-    </div>
-
   </div>
 </section>
 
-<!-- PORTFOLIO -->
-<section id="portfolio" class="section">
+<!-- PROJECTS -->
+<section id="projects" class="section dark">
   <div class="container">
-    <h2>Portfolio</h2>
+    <h2 class="section-title">Projects</h2>
+    <p class="section-subtitle">
+      A selection of systems and experiments that reflect how I think about ML, product, and scalability.
+    </p>
+
     <div class="project-grid">
-      <div class="project-card">
+      <article class="project-card">
         <h3>Enterprise Feedback RAG</h3>
-        <p>10k+ docs • Llama-3 • vLLM • FastAPI</p>
-      </div>
-      <div class="project-card">
+        <p class="project-desc">
+          Built a RAG pipeline over 10k+ survey responses for leadership insights with strict latency and quality requirements.
+        </p>
+        <p class="project-tech">Llama-3 · GPT-4o · vLLM · FastAPI · Ray · Airflow · AWS</p>
+      </article>
+
+      <article class="project-card">
         <h3>FinanceHelper AI</h3>
-        <p>LoRA fine-tuned Mistral • RAG</p>
-      </div>
-      <div class="project-card">
-        <h3>LLM-Driven Financial Sentiment Analysis Tool</h3>
-        <p>LLM • Data Mining • NLP • AI • Prompt Engineering</p>
-      </div>
-      <div class="project-card">
-        <h3>Prediction Analysis of Diabetes Patients Readmission</h3>
-        <p>Machine Learning • Decision Trees • Predictive Modelling</p>
-      </div>
-     <div class="project-card">
-        <h3>Aviation Safety and Flight Delays </h3>
-        <p>Data Cleaning & Preprocessing • Python • Pandas • Power BI • ArcGIS Maps</p>
-      </div>
-      <div class="project-card">
-        <h3>Music Genre Classification using Lyrics</h3>
-        <p>Deep Learning • NLP • Text Classification</p>
-      </div>
-      <div class="project-card">
+        <p class="project-desc">
+          Financial assistant fine-tuned on “The Psychology of Money” with semantic search and contextual RAG for personalized advice.
+        </p>
+        <p class="project-tech">Mistral-7B · LoRA · LangChain · Vector DB · Docker</p>
+      </article>
+
+      <article class="project-card">
+        <h3>LLM-Driven Financial Sentiment Analysis</h3>
+        <p class="project-desc">
+          End-to-end pipeline for scraping financial news, labeling sentiment, and summarizing signals for downstream models.
+        </p>
+        <p class="project-tech">Scrapy · BERT · PyTorch · Airflow · PostgreSQL</p>
+      </article>
+
+      <article class="project-card">
+        <h3>Prediction of Diabetes Readmission</h3>
+        <p class="project-desc">
+          Explored feature engineering and interpretable models to predict readmission risk for diabetes patients.
+        </p>
+        <p class="project-tech">XGBoost · Decision Trees · SHAP · Python</p>
+      </article>
+
+      <article class="project-card">
+        <h3>Aviation Safety & Flight Delays</h3>
+        <p class="project-desc">
+          Built a data storytelling dashboard around flight delays and safety signals using geospatial analysis.
+        </p>
+        <p class="project-tech">Python · Pandas · Power BI · ArcGIS</p>
+      </article>
+
+      <article class="project-card">
+        <h3>Music Genre Classification via Lyrics</h3>
+        <p class="project-desc">
+          Used deep NLP models to classify song genres purely from lyrics and textual patterns.
+        </p>
+        <p class="project-tech">Deep Learning · NLP · Text Classification</p>
+      </article>
+
+      <article class="project-card">
         <h3>Automated Financial Document Summarization</h3>
-        <p>NLP • DistilBART • Abstractive Text Generation</p>
-      </div>
-      <div class="project-card">
-        <h3>Financial Sentiment Dataset Creation</h3>
-        <p>Scrapy • API Integration • Data Engineering • NLP</p>
-      </div>
-      <div class="project-card">
+        <p class="project-desc">
+          Abstractive summarization for long financial docs to make reporting more digestible.
+        </p>
+        <p class="project-tech">DistilBART · Transformers · Python</p>
+      </article>
+
+      <article class="project-card">
         <h3>Human Activity Recognition</h3>
-        <p>Computer Vision • Transfer Learning • Convolutional Neural Networks</p>
+        <p class="project-desc">
+          Classified human actions using video data and transfer learning on pretrained CNNs.
+        </p>
+        <p class="project-tech">Computer Vision · CNNs · Transfer Learning</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- WORK EXPERIENCE -->
+<section id="work" class="section">
+  <div class="container">
+    <h2 class="section-title">Work Experience</h2>
+
+    <div class="timeline">
+      <div class="timeline-item">
+        <div class="timeline-year">2025</div>
+        <div class="timeline-card">
+          <h3>Machine Learning Engineer · Boehringer Ingelheim</h3>
+          <p class="timeline-location">Athens, GA · Jan 2025 – Jul 2025</p>
+          <p class="timeline-text">
+            Designed a scalable RAG architecture for 10k+ employee survey responses, improved chatbot throughput by
+            80% using vLLM + async FastAPI on Ray multi-GPU clusters, and automated retraining via Airflow with
+            monitoring in CloudWatch, Prometheus, and Grafana to meet 95% SLA.
+          </p>
+          <p class="timeline-tech">LLMs · RAG · vLLM · Ray · Airflow · AWS · Grafana · Prometheus</p>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-year">2022–2023</div>
+        <div class="timeline-card">
+          <h3>Data Scientist · Yunometa</h3>
+          <p class="timeline-location">Mumbai, India · Aug 2022 – Jul 2023</p>
+          <p class="timeline-text">
+            Modernized a legacy monolith into cloud-native microservices on AWS EKS with Django, Docker, and OAuth2.
+            Built data pipelines over 10M+ records with Spark on EMR, Athena, Redshift, and Druid, and trained OCR
+            models for multilingual document extraction using Faster R-CNN.
+          </p>
+          <p class="timeline-tech">Django · EKS · Spark EMR · Redshift · Athena · Druid · PyTorch · OCR</p>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-year">2021–2022</div>
+        <div class="timeline-card">
+          <h3>Data Scientist · Kritexco</h3>
+          <p class="timeline-location">Mumbai, India · Dec 2021 – Mar 2022</p>
+          <p class="timeline-text">
+            Analyzed 50k+ NFT records from OpenSea and Rarible, built LSTM models for NFT price prediction, and
+            partnered with stakeholders to design reporting dashboards.
+          </p>
+          <p class="timeline-tech">Python · TensorFlow · LSTM · Tableau</p>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-year">2021</div>
+        <div class="timeline-card">
+          <h3>Machine Learning Engineer · Aadyam Infotech</h3>
+          <p class="timeline-location">Pune, India · Jun 2021 – Aug 2021</p>
+          <p class="timeline-text">
+            Built an NLP-driven document parsing pipeline leveraging regex and Azure AI, achieving 86% extraction
+            accuracy on unstructured documents.
+          </p>
+          <p class="timeline-tech">NLP · Azure AI · Regex · Python</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EDUCATION -->
+<section id="education" class="section dark">
+  <div class="container">
+    <h2 class="section-title">Education</h2>
+
+    <div class="timeline">
+      <div class="timeline-item">
+        <div class="timeline-year">2023–2025</div>
+        <div class="timeline-card">
+          <h3>MS Data Analytics Engineering</h3>
+          <p class="timeline-location">Northeastern University · Boston, MA</p>
+          <p class="timeline-text">
+            Coursework in Neural Networks & Deep Learning, NLP, Data Mining, Data Management, Computation & Visualization,
+            and Database Management Systems.
+          </p>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
 <!-- CONTACT -->
-<section id="contact" class="section dark">
+<section id="contact" class="section">
   <div class="container contact-wrapper">
 
     <div class="contact-left">
-      <h2>Contact Me</h2>
+      <h2 class="section-title">Contact</h2>
+      <p class="section-subtitle">
+        Open to ML Engineer, Applied Scientist, and MLE roles. Best fit: teams shipping LLM-driven products with real users.
+      </p>
 
       <div class="contact-item">
         <span class="icon">✉️</span>
@@ -198,15 +307,15 @@
       </div>
 
       <div class="socials">
-        <a href="https://www.linkedin.com/in/hrishikesh-keswani-0291b6181/" target="_blank">
+        <a href="https://www.linkedin.com/in/hrishikesh-keswani-0291b6181/" target="_blank" rel="noopener">
           <img src="assets/img/linkedin.svg" alt="LinkedIn">
         </a>
-        <a href="https://github.com/heroiclunatic77" target="_blank">
+        <a href="https://github.com/heroiclunatic77" target="_blank" rel="noopener">
           <img src="assets/img/github.svg" alt="GitHub">
         </a>
       </div>
 
-      <a href="Hrishikesh_Keswani_Resume.pdf" class="resume-btn" target="_blank">
+      <a href="Hrishikesh_Keswani_Resume.pdf" class="resume-btn" target="_blank" rel="noopener">
         View / Download Resume
       </a>
     </div>
