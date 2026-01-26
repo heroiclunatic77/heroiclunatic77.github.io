@@ -6,35 +6,51 @@ console.log("Portfolio loaded");
 document.querySelectorAll(".copy-btn").forEach(btn => {
   btn.addEventListener("click", () => {
     const id = btn.getAttribute("data-copy");
-    const text = document.getElementById(id).innerText;
+    const target = document.getElementById(id);
+    if (!target) return;
 
-    navigator.clipboard.writeText(text);
+    const text = target.textContent.trim();
 
-    btn.innerText = "✔";
-    setTimeout(() => btn.innerText = "📋", 800);
+    if (!navigator.clipboard) {
+      console.warn("Clipboard API not available");
+      return;
+    }
+
+    navigator.clipboard.writeText(text).then(() => {
+      const original = btn.textContent;
+      btn.textContent = "✔";
+      setTimeout(() => (btn.textContent = original), 800);
+    });
   });
 });
 
 /* =========================
-   ABOUT TABS LOGIC
+   HERO CODE TABS
    ========================= */
-const tabs = document.querySelectorAll(".about-tab");
-const panels = document.querySelectorAll(".about-panel");
+const codeTabs = document.querySelectorAll(".code-tab");
+const codeBlocks = document.querySelectorAll(".code-block");
 
-tabs.forEach(tab => {
+codeTabs.forEach(tab => {
   tab.addEventListener("click", () => {
+    const lang = tab.dataset.lang;
+    const targetId = `code-${lang}`;
 
-    // remove active from all tabs
-    tabs.forEach(t => t.classList.remove("active"));
-
-    // hide all panels
-    panels.forEach(p => p.classList.remove("active"));
-
-    // activate clicked tab
+    codeTabs.forEach(t => t.classList.remove("active"));
     tab.classList.add("active");
 
-    // show corresponding panel
-    const targetId = tab.getAttribute("data-tab");
-    document.getElementById(targetId).classList.add("active");
+    codeBlocks.forEach(block => {
+      block.classList.toggle("active", block.id === targetId);
+    });
   });
 });
+
+/* =========================
+   CONTACT FORM (DEMO)
+   ========================= */
+function handleSubmit(event) {
+  event.preventDefault();
+  const status = document.getElementById("form-status");
+  if (status) {
+    status.textContent = "Thanks for reaching out! This demo form doesn’t send emails yet.";
+  }
+}
